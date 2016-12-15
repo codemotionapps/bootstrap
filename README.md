@@ -18,21 +18,41 @@ Here's what the LESS version looks like:
 
 Or if you prefer, the standard css way:
 
-    <link rel="stylesheet" type="text/css" href="bootstrap-1.0.0.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-1.1.0.css">
 
 For more info, refer to the docs!
 
 
-Reporting bugs
---------------
+Bug Tracker
+-----------
 
-Please create an issue here on GitHub! :P
+Have a bug? Please create an issue here on GitHub!
+
+https://github.com/twitter/bootstrap/issues
 
 
-Google Group
+Mailing List
 ------------
 
+Have a question? Ask on our mailing list!
+
+twitter-bootstrap@googlegroups.com
+
 http://groups.google.com/group/twitter-bootstrap
+
+
+Developers
+----------
+
+We have included a makefile with convenience methods for working with the bootstrap library.
+
++ **build** - `make build`
+This will run the less compiler on the bootstrap lib and generate a bootstrap.css and bootstrap.min.css file.
+The lessc compiler is required for this command to run.
+
++ **watch** - `make watch`
+This is a convenience method for watching your less files and automatically building them whenever you save.
+Watchr is required for this command to run.
 
 
 AUTHORS

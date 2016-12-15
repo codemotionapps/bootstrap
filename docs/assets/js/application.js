@@ -42,25 +42,12 @@ $(document).ready(function(){
   // Dropdown example for topbar nav
   // ===============================
 
-  $("body").bind("click", function(e) {
-    $("ul.menu-dropdown").hide();
-    $('a.menu').parent("li").removeClass("open").children("ul.menu-dropdown").hide();
+  $("body").bind("click", function (e) {
+    $('a.menu').parent("li").removeClass("open");
   });
 
-  $("a.menu").click(function(e) {
-    var $target = $(this);
-    var $parent = $target.parent("li");
-    var $siblings = $target.siblings("ul.menu-dropdown");
-    var $parentSiblings = $parent.siblings("li");
-    if ($parent.hasClass("open")) {
-      $parent.removeClass("open");
-      $siblings.hide();
-    } else {
-      $parent.addClass("open");
-      $siblings.show();
-    }
-    $parentSiblings.children("ul.menu-dropdown").hide();
-    $parentSiblings.removeClass("open");
+  $("a.menu").click(function (e) {
+    var $li = $(this).parent("li").toggleClass('open');
     return false;
   });
 
@@ -92,10 +79,9 @@ $(document).ready(function(){
 
   // Copy code blocks in docs
   $(".copy-code").focus(function() {
-    $(this).select();
-  });
-  $(".copy-code").mouseup(function(e) {
-    e.preventDefault();
+    var el = this;
+    // push select to event loop for chrome :{o
+    setTimeout(function () { $(el).select(); }, 1);
   });
 
 
