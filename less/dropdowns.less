@@ -62,7 +62,7 @@
   }
 
   // Links within the dropdown menu
-  > li > a {
+  > div > .item > a {
     display: block;
     padding: 3px 20px;
     clear: both;
@@ -74,7 +74,7 @@
 }
 
 // Hover/Focus state
-.dropdown-menu > li > a {
+.dropdown-menu > div > .item > a {
   &:hover,
   &:focus {
     text-decoration: none;
@@ -84,7 +84,7 @@
 }
 
 // Active state
-.dropdown-menu > .active > a {
+.dropdown-menu > div > .active > a {
   &,
   &:hover,
   &:focus {
@@ -99,7 +99,7 @@
 //
 // Gray out text and ensure the hover/focus state remains gray
 
-.dropdown-menu > .disabled > a {
+.dropdown-menu > div > .disabled > a {
   &,
   &:hover,
   &:focus {
